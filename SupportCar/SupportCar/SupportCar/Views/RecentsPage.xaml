@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SupportCar.Views.RecentsPage"
+             xmlns:vm="clr-namespace:SupportCar.ViewModels"
+             Title="Recientes">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="refresh_button.png" Clicked="OnRefresh" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView  x:Name="RecentsListView" 
+                   ItemsSource="{Binding recentItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell      Height="30" 
+                                    Text="{Binding Name}"
+                                    Detail="Ver información"
+                                    ImageSource="{Binding Image}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

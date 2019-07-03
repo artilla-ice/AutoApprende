@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SupportCar.Views.ScanPage"
+             xmlns:vm="clr-namespace:SupportCar.ViewModels"
+             Title="Escánear">
+    
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand">
+
+            <ContentView>
+                <Image HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="170"
+                   HeightRequest="170"
+                   Margin="0,0,0,25"
+                   Source="qr_example.png"/>
+            </ContentView>
+            
+            <Label HorizontalTextAlignment="Center"
+            Text="Para obtener información acerca"/>
+            <Label HorizontalTextAlignment="Center" 
+            Text="de cualquier componente, identifique el "/>
+            <Label HorizontalTextAlignment="Center"
+            Text="código QR de la pieza y, a continuación"/>
+            <Label HorizontalTextAlignment="Center"
+            Text="escanee el código."/>
+
+            <Button 
+            Margin="0,50,0,0"
+            BackgroundColor="CadetBlue"
+            Text="Escanear"
+            Clicked="OnScan"/>
+
+            <!--<Button 
+            Margin="0,50,0,0"
+            BackgroundColor="BlueViolet"
+            Text="Prueba"
+            Clicked="OnTest"/>-->
+
+            <!--<Button HorizontalOptions="Center"
+            Text="Agregar nuevo componente"
+                   BorderColor="Transparent"
+                   BackgroundColor="Transparent"
+                   TextColor="CadetBlue"
+                    Scale="0.8"
+                   FontSize="Small"
+                    Clicked="Add_Product"/>-->
+        </StackLayout>
+
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SupportCar.Views.HomePage"
+             Title="¡Explora!">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView  x:Name="MenuListView" 
+                   ItemsSource="{Binding CarServices}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell  Height="75"
+                                    TextColor="SeaGreen"
+                                    Text="{Binding Name}"
+                                    ImageSource="{Binding Icon}"
+                                    >
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
